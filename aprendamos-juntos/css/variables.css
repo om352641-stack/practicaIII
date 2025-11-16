@@ -1,0 +1,31 @@
+:root {
+  --bg: #f6fbff;
+  --card: #ffffff;
+  --accent: #3aa3ff;
+  --accent2: #ff6fb6;
+  --txt: #13324a;
+  --muted: #6b7b8a;
+  --radius: 14px;
+  --glass: rgba(255,255,255,0.6);
+  --success: #64c28a;
+  --error: #ff5c5c;
+  --shadow: 0 6px 18px rgba(20,30,50,0.06);
+  --shadow-lg: 0 8px 26px rgba(58,163,255,0.18);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, system-ui, Arial;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, #eaf7ff 0%, transparent 15%),
+    radial-gradient(900px 500px at 90% 90%, #ffeaf3 0%, transparent 12%),
+    var(--bg);
+  color: var(--txt);
+  -webkit-font-smoothing: antialiased;
+}

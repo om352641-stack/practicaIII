@@ -1,0 +1,167 @@
+@import 'variables.css';
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 68px;
+  height: 68px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,var(--accent),var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+h1 { margin: 0; font-size: 20px; }
+.tag { color: var(--muted); font-size: 13px; }
+
+/* Main layout */
+main {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 18px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+nav.card, .panel.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+nav.card {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  color: var(--txt);
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: linear-gradient(90deg,rgba(58,163,255,0.08),rgba(255,111,182,0.04));
+}
+
+nav button.active {
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  color: #fff !important;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Panel */
+.panel.card { padding: 12px 16px; }
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,rgba(58,163,255,0.06),rgba(255,111,182,0.03));
+  margin-bottom: 12px;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(58,163,255,0.14);
+  transition: transform 0.2s;
+}
+
+.cta:hover { transform: translateY(-2px); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card-small {
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: all 0.3s;
+}
+
+.card-small:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.small-title { font-weight: 700; margin: 0 0 8px 0; }
+.muted { color: var(--muted); font-size: 13px; }
+
+/* Games */
+.center { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
+.quiz-answers button { display: block; margin: 8px 0; width: 100%; padding: 10px; border-radius: 10px; border: 2px solid rgba(0,0,0,0.06); cursor: pointer; background: #fff; text-align: left; }
+.correct { background: #dff6e1; border-color: var(--success); }
+.wrong { background: #ffd8d8; border-color: var(--error); }
+
+.board { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; padding: 10px; }
+.card-game { aspect-ratio: 1/1; border-radius: 8px; background: #fff; display: grid; place-items: center; font-size: 28px; cursor: pointer; box-shadow: var(--shadow); }
+.flipped { background: linear-gradient(90deg,var(--accent),var(--accent2)); color: #fff; }
+
+.dzone { display: flex; gap: 12px; flex-wrap: wrap; }
+.item { padding: 8px 12px; border-radius: 8px; background: #fff; border: 1px dashed rgba(20,30,50,0.06); cursor: grab; }
+.drop { min-height: 80px; border-radius: 10px; padding: 10px; background: rgba(255,255,255,0.6); border: 2px dashed rgba(0,0,0,0.06); transition: all 0.2s; }
+
+.gallery { display: flex; gap: 8px; flex-wrap: wrap; }
+.thumb { width: 120px; height: 80px; border-radius: 8px; object-fit: cover; border: 4px solid #fff; box-shadow: var(--shadow); cursor: pointer; }
+
+/* Footer */
+footer {
+  max-width: 1200px;
+  margin: 22px auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding-bottom: 40px;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  main { grid-template-columns: 1fr; padding: 12px; }
+  nav.card { position: relative; }
+  .logo { width: 54px; height: 54px; }
+  .hero { flex-direction: column; }
+}

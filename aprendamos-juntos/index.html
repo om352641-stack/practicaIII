@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Plataforma educativa interactiva para alumnos de 5° primaria" />
+  <meta name="theme-color" content="#3aa3ff" />
+  <title>Aprendamos Juntos — 5° primaria</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">AJ</div>
+    <div>
+      <h1>Aprendamos Juntos</h1>
+      <div class="tag">5° primaria · Aprende jugando 🚀</div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="card" aria-label="Navegación principal">
+      <button id="btnAprende" class="active">📘 Aprende</button>
+      <button id="btnJuega">🎮 Juega</button>
+      <button id="btnPlaneta">🌎 Planeta</button>
+      <button id="btnValores">💖 Valores</button>
+      <button id="btnNoticias">📰 Noticias</button>
+      <button id="btnGaleria">🖼️ Galería</button>
+      <button id="btnContact">✉️ Contacto</button>
+    </nav>
+
+    <section class="panel card" id="panel">
+      <div class="hero">
+        <div class="left">
+          <h2>¡Bienvenidos!</h2>
+          <p class="muted">Aprende, juega y cuida el planeta con nosotros.</p>
+        </div>
+        <button class="cta" id="btnStart">Empezar 🎯</button>
+      </div>
+
+      <!-- Secciones dinámicas -->
+      <div id="aprende"></div>
+      <div id="juega" style="display:none"></div>
+      <div id="planeta" style="display:none"></div>
+      <div id="valores" style="display:none"></div>
+      <div id="noticias" style="display:none"></div>
+      <div id="galeria" style="display:none"></div>
+      <div id="contacto" style="display:none"></div>
+    </section>
+  </main>
+
+  <footer>
+    © 2024 Aprendamos Juntos · Diseñado para 5° primaria
+    <br><small>Soporte: contacto@aprendamosjuntos.local</small>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/lessons.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
